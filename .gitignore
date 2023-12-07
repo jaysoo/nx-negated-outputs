@@ -39,3 +39,6 @@ yarn-error.log*
 
 
 .nx/cache
+
+# Next.js
+.next

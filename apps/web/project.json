@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "targets" : {
+    "build": {
+      "command": "next build",
+      "options": {
+        "cwd": "apps/web",
+      },
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": true,
+      "inputs": [
+        "default",
+        "^default",
+        {
+          "externalDependencies": [
+            "next"
+          ]
+        }
+      ],
+      "outputs": [
+        "{projectRoot}/.next",
+        "!{projectRoot}/.next/cache"
+      ],
+    }
+  }
+}
